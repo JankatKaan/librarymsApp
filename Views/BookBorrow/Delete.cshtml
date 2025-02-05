@@ -1,0 +1,11 @@
+@model BookBorrow
+
+<p>
+    <b>@Model.Member.Name</b> adlı kişiden <b>@Model.Book.Title</b> isimli kitabın kaydını silmek istediğine emin misin?
+
+    <form asp-action="Delete" method="post">
+        <input type="hidden" value="@Model.BorrowId" name="id">
+        <button type="submit" class="btn btn-danger">Evet</button>
+        <a asp-action="Index" class="btn btn-primary">Hayır</a>
+    </form>
+</p>

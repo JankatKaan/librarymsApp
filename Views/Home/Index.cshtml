@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Book>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center mb-5">
+    <div class="row gap-4">
+        @foreach (var item in Model)
+        {
+            <div class="col d-flex justify-content-center" style="height: 700px;">
+                <div class="card shadow p-3 mb-5 rounded" style="width: 18rem;">
+                    <img class="card-img-top" style="height:400px" src="@Html.DisplayFor(modelItem => item.CoverImage)"
+                        alt="Card image cap">
+                    <div class="card-body d-flex justify-content-center align-items-center flex-column ">
+                        <p class="fs-2 fw-2">@Html.DisplayFor(modelItem => item.Title)</p>
+                        <p class="fs-">@Html.DisplayFor(modelItem => item.Author)</p>
+                        <div class="badge badge-info bg-primary p-2">@Html.DisplayFor(modelItem => item.Category)</div>
+                        <button type="button" class="btn btn-primary my-2" data-bs-toggle="modal"
+                            data-bs-target="#book@(item.BookId.ToString())"> Detayları Göster</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="book@(item.BookId.ToString())" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">@Html.DisplayFor(modelItem => item.Title)</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>
+                                @Html.DisplayFor(modelItem => item.Description)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<style>
+    .card:hover {
+        scale: 1.05;
+    }
+    .modal-body {
+  word-break: break-word;
+}
+
+</style>

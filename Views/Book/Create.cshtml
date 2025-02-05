@@ -1,0 +1,31 @@
+@model Book
+<h2>Kitap Ekle</h2>
+<hr>
+<form asp-action="Create" asp-controller="Book" method="post">
+    <div class="mb-3">
+        <label asp-for="Title" class="form-label"></label>
+        <input asp-for="Title" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="Author" class="form-label"></label>
+        <input asp-for="Author" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="Category" class="form-label"></label>
+        <input asp-for="Category" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="Description" class="form-label"></label>
+        <input asp-for="Description" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="CoverImage" class="form-label"></label>
+        <input asp-for="CoverImage" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="PublicationYear" class="form-label"></label>
+        <input asp-for="PublicationYear" class="form-control">
+    </div>
+
+    <button type="submit" class="btn btn-secondary">Kaydet</button>
+</form>

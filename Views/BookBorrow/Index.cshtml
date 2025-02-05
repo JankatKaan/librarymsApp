@@ -1,0 +1,32 @@
+@model IEnumerable<BookBorrow>
+
+<h2>Ödünç Verme Listesi</h2>
+<a asp-controller="BookBorrow" asp-action="Create" class="btn btn-primary">Ödünç Ver</a>
+<hr>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th style="width: 150px;">@Html.DisplayNameFor(m => m.BorrowId)</th>
+            <th>Name Surname</th>
+            <th>@Html.DisplayNameFor(m => m.Book.Title)</th>
+            <th>Borrow Date</th>
+            <th style="width: 150px;"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.BorrowId)</td>
+                <td>@Html.DisplayFor(modelItem => item.Member.NameSurname)</td>
+                <td>@Html.DisplayFor(modelItem => item.Book.Title)</td>
+                <td>@Html.DisplayFor(modelItem => item.BorrowDate)</td>
+                <td>
+                    <a asp-controller="BookBorrow" asp-action="Delete" asp-route-id="@item.BorrowId"
+                        class="btn btn-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

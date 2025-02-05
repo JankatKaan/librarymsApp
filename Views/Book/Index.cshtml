@@ -1,0 +1,29 @@
+@model IEnumerable<Book>
+
+<h2>Kitap Listesi</h2>
+<a asp-controller="Book" asp-action="Create" class="btn btn-primary">Kitap ekle</a>
+<hr>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th style="width: 10px;">@Html.DisplayNameFor(m=>m.BookId)</th>
+            <th>@Html.DisplayNameFor(m=>m.Title)</th>
+            <th>@Html.DisplayNameFor(m=>m.Author)</th>
+            <th style="width: 150px;"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model){
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.BookId)</td>
+                <td><img class="mx-auto" height="128px" src="@item.CoverImage"></img></td>
+                <td>@Html.DisplayFor(modelItem => item.Title)</td>
+                <td>@Html.DisplayFor(modelItem=>item.Author)</td>
+                <td>
+                    <a asp-controller="Book" asp-action="Edit" asp-route-id="@item.BookId" class="btn btn-warning btn-sm">Details</a>
+                    <a asp-controller="Book" asp-action="Delete" asp-route-id="@item.BookId" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

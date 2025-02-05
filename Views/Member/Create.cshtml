@@ -1,0 +1,23 @@
+@model Member
+<h2>Üye Ekle</h2>
+<hr>
+<form asp-action="Create" asp-controller="Member" method="post">
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="Surname" class="form-label"></label>
+        <input asp-for="Surname" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label"></label>
+        <input asp-for="Email" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="Phone" class="form-label"></label>
+        <input asp-for="Phone" class="form-control">
+    </div>
+
+    <button type="submit" class="btn btn-secondary">Kaydet</button>
+</form>

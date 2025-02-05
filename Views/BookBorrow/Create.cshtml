@@ -1,0 +1,21 @@
+@model BookBorrow
+
+<h2>Ödünç Verme</h2>
+<hr>
+
+<form asp-action="Create" asp-controller="BookBorrow" method="post">
+    <div class="mb-3">
+        <label asp-for="BookId" class="form-label">Book Name</label>
+        <select asp-for="BookId" asp-items="ViewBag.Books" class="form-select">
+            <option value="">Seçiniz</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label asp-for="MemberId" class="form-label">Member Name</label>
+        <select asp-for="MemberId" asp-items="ViewBag.Members" class="form-select">
+            <option value="">Seçiniz</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-secondary">Kaydet</button>
+</form>
