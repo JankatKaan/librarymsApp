@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace librarymsApp.Controllers{
 
+    // Kitap işlemlerini yöneten controller
     public class BookController : Controller{
 
         private readonly DataContext _context;

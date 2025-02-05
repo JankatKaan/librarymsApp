@@ -2,6 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace librarymsApp.Data{
 
+    // Ödünç verme modelini tanımlayan sınıf
     public class BookBorrow{
 
         [Key]

@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace librarymsApp.Controllers{
 
+    // Ödünç verme işlemlerini yöneten controller
     public class BookBorrowController : Controller{
 
         private readonly DataContext _context;
@@ -20,7 +21,7 @@ namespace librarymsApp.Controllers{
 
         [HttpGet]
         public async Task<IActionResult> Create(){
-            ViewBag.Books =new SelectList(await _context.Books.ToListAsync(), "BookId", "Title");
+            ViewBag.Books =new SelectList(await _context.Books.Where(b => !_context.BookBorrows.Any(bb => bb.BookId == b.BookId)).ToListAsync(), "BookId", "Title");
             ViewBag.Members = new SelectList(await _context.Members.ToListAsync(), "MemberId", "NameSurname");
             return View();
         }

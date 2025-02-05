@@ -1,7 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 
 namespace librarymsApp.Data{
-
+    
+    // Veritabanı bağlantısını sağlayan sınıf
     public class DataContext : DbContext{
 
         public DataContext(DbContextOptions<DataContext>options):base(options){}

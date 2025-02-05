@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace librarymsApp.Controllers{
 
+    // Üye işlemlerini yöneten controller
     public class MemberController : Controller{
 
         private readonly DataContext _context;

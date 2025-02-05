@@ -2,6 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace librarymsApp.Data{
 
+    // Üye modelini tanımlayan sınıf
     public class Member{
 
         [Key]

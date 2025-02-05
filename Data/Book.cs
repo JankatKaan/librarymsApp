@@ -2,6 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace librarymsApp.Data{
 
+    // Kitap modelini tanımlayan sınıf
     public class Book{
 
         [Key]
