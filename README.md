@@ -48,19 +48,22 @@ Kitaplar ve üyeler için ekleme/düzenleme/silme butonlarını içerir.
 
 Ana Sayfa:
 
-![home](https://github.com/user-attachments/assets/84ac42b2-a92f-4564-8f52-813313a38efd)
+![image](https://github.com/user-attachments/assets/5954498b-c471-485c-942c-ddfcdad0f4b9)
+
+![image](https://github.com/user-attachments/assets/7cd4ceef-e421-4519-a639-5d37480033bc)
 
 
 Kitap Listesi Sayfası:
 
-![book](https://github.com/user-attachments/assets/54c91612-7bc6-4be2-8a41-1b2d09ae42e6)
+![image](https://github.com/user-attachments/assets/a667011e-6bf0-48e1-9c29-b32b255a7366)
 
 
 Üye Listesi Sayfası:
 
-![member](https://github.com/user-attachments/assets/e11ffc7d-d6f7-4287-b3f7-47d322b5cd59)
+![image](https://github.com/user-attachments/assets/8dfcc417-c535-47cb-bd83-22a1dc261f7b)
 
 
 Ödünç Verme Sayfası:
 
-![borrow](https://github.com/user-attachments/assets/9de0ebca-0738-43d7-b3d6-07486b5eea2c)
+![image](https://github.com/user-attachments/assets/356ece09-c78c-4f5c-bde0-221937c26440)
+
